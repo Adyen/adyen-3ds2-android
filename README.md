@@ -14,7 +14,7 @@ The SDK is available either through [jcenter][dl] or via manual installation.
 
 1. Import the SDK by adding this line to your `build.gradle` file.
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:0.9.2"
+implementation "com.adyen.threeds:adyen-3ds2:0.9.3"
 ```
 
 ### Import manually
@@ -22,7 +22,7 @@ implementation "com.adyen.threeds:adyen-3ds2:0.9.2"
 1. Copy the SDK package `adyen-3ds2.aar` to the `/libs` folder in your module.
 2. Import the SDK by adding this line to your module `build.gradle` file.
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:0.9.2@aar"
+implementation "com.adyen.threeds:adyen-3ds2:0.9.3@aar"
 ```
 
 ## Usage
@@ -113,7 +113,7 @@ toolbarCustomization.setTextColor("#FFFFFF");
 UiCustomization uiCustomization = new UiCustomization();
 uiCustomization.setToolbarCustomization(toolbarCustomization);
 
-ThreeDS2Service.INSTANCE.initialize(getContext(), configParameters, null, uiCusomization);
+ThreeDS2Service.INSTANCE.initialize(getContext(), configParameters, null, uiCustomization);
 ```
 
 ## See also
@@ -129,5 +129,5 @@ For more information, see the [LICENSE][license] file.
 
 [dl]: http://jcenter.bintray.com/com/adyen/threeds/adyen-3ds2/
 [docs]: https://docs.adyen.com/developers/risk-management/3d-secure-2-0/android-sdk-integration
-[javadoc]: https://adyen.github.io/adyen-3ds2-android/javadoc/index.html
+[javadoc]: https://adyen.github.io/adyen-3ds2-android/
 [license]: https://github.com/Adyen/adyen-3ds2-android/blob/master/LICENSE
