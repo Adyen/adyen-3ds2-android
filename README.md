@@ -14,7 +14,7 @@ The SDK is available either through [jcenter][dl] or via manual installation.
 
 1. Import the SDK by adding this line to your `build.gradle` file.
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:0.9.4"
+implementation "com.adyen.threeds:adyen-3ds2:0.9.5"
 ```
 
 ### Import manually
@@ -22,7 +22,7 @@ implementation "com.adyen.threeds:adyen-3ds2:0.9.4"
 1. Copy the SDK package `adyen-3ds2.aar` to the `/libs` folder in your module.
 2. Import the SDK by adding this line to your module `build.gradle` file.
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:0.9.4@aar"
+implementation "com.adyen.threeds:adyen-3ds2:0.9.5@aar"
 ```
 
 ## Usage
@@ -97,9 +97,31 @@ mTransaction.doChallenge(/*Activity*/ this, challengeParameters, new ChallengeSt
 
 When the challenge is completed successfully, submit the `transactionStatus` in the `completionEvent` in your second call to `/authorise3ds2`.
 
-### Customizing the UI
+## Customizing the UI
 
-The SDK inherits your App's theme to ensure the UI of the challenge flow fits your app's look and feel.
+The SDK provides a default challenge flow look and feel that can be customized to fit your App's look and feel
+with one or the combination of the following methods.
+
+### Customize the SDK theme
+
+Override the `ThreeDS2Theme` style attributes by adding the following XML snippet to your App's `styles.xml` file.
+
+:warning: _The SDK theme `ThreeDS2Theme` must inherit from one of AppCompat's theme variants._
+* Theme.AppCompat.Light.DarkActionBar
+* Theme.AppCompat.Light
+* Theme.AppCompat
+
+```xml
+<style name="ThreeDS2Theme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize the SDK theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+</style>
+```
+
+### Using UiCustomization class
+
 In case that further UI customizations are needed, the SDK provides some customization options.
 These customization options are available through the `UiCustomization` class.
 To use them, create an instance of `UiCustomization`, configure the desired properties and pass it during initialization of the `ThreeDS2Service.INSTANCE`.
