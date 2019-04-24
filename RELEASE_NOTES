@@ -1,5 +1,7 @@
 <ul>
-<li>SDK theme improvements.</li>
-<li>Change SDK theme customization mechanism.</li>
-<li>Fix 3DS2 challenge UI is not responsive issue.</li>
+<li>Reduce the SDK size by +200kb.</li>
+<li>Fix UI customization.</li>
+<li>Disable the OTP challenge input text auto suggestions.</li>
+<li>Fix single select challenge none of the options is selected.</li>
+<li>Add troubleshooting readme page.</li>
 </ul>
