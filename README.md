@@ -19,7 +19,7 @@ implementation "com.adyen.threeds:adyen-3ds2:0.9.6"
 
 ### Import manually
 
-1. Copy the SDK package `adyen-3ds2.aar` to the `/libs` folder in your module.
+1. Copy the SDK package `adyen-3ds2-0.9.6.aar` to the `/libs` folder in your module.
 2. Import the SDK by adding this line to your module `build.gradle` file.
 ```groovy
 implementation "com.adyen.threeds:adyen-3ds2:0.9.6@aar"

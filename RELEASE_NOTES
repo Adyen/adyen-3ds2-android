@@ -1,5 +1,4 @@
 <ul>
-<li>Reduce the SDK size by +200kb.</li>
 <li>Fix UI customization.</li>
 <li>Disable the OTP challenge input text auto suggestions.</li>
 <li>Fix single select challenge none of the options is selected.</li>
