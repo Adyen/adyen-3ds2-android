@@ -2,8 +2,6 @@
 
 With this SDK, you can accept 3D Secure 2.0 payments via Adyen.
 
-_This SDK is currently intended for testing purposes only._
-
 <img src="https://user-images.githubusercontent.com/37903534/51109822-c66df780-17f6-11e9-9cd7-0bf74f485682.gif" width="400" />
 
 ## Installation
@@ -14,15 +12,15 @@ The SDK is available either through [jcenter][dl] or via manual installation.
 
 1. Import the SDK by adding this line to your `build.gradle` file.
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:0.9.6"
+implementation "com.adyen.threeds:adyen-3ds2:2.1.0-rc01"
 ```
 
 ### Import manually
 
-1. Copy the SDK package `adyen-3ds2-0.9.6.aar` to the `/libs` folder in your module.
+1. Copy the SDK package `adyen-3ds2-2.1.0-rc01.aar` to the `/libs` folder in your module.
 2. Import the SDK by adding this line to your module `build.gradle` file.
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:0.9.6@aar"
+implementation "com.adyen.threeds:adyen-3ds2:2.1.0-rc01@aar"
 ```
 
 ## Usage
@@ -33,10 +31,10 @@ First, create an instance of `ConfigParameters` with values from the additional 
 Then, use the on `ThreeDS2Service.INSTANCE` to create a transaction.
 
 ```java
-ConfigParameters configParameters = AdyenConfigParameters.from(
+ConfigParameters configParameters = new AdyenConfigParameters.Builder(
         directoryServerId, // Retrieved from Adyen.
         directoryServerPublicKey // Retrieved from Adyen.
-);
+    ).build();
 
 ThreeDS2Service.INSTANCE.initialize(/*Activity*/ this, configParameters, null, null);
 
@@ -49,6 +47,8 @@ AuthenticationRequestParameters authenticationRequestParameters = mTransaction.g
 Use the `mTransaction`'s `authenticationRequestParameters` in your call to `/authorise3ds2`.
 
 :warning: _Keep a reference to your `Transaction` instance until the transaction is finished._
+:warning: _When the transaction is finished successfully or not it must be closed._
+:warning: _When the 3DS2 flow is finished the 3DS2 service `ThreeDS2Service.INSTANCE` must be cleaned up._
 
 ### Performing a challenge
 
@@ -96,6 +96,22 @@ mTransaction.doChallenge(/*Activity*/ this, challengeParameters, new ChallengeSt
 ```
 
 When the challenge is completed successfully, submit the `transactionStatus` in the `completionEvent` in your second call to `/authorise3ds2`.
+
+## Closing the transaction
+
+Every `Transaction` instance is usable only once, so when the transaction is finished successfluy or not, it should be closed like so:
+
+```java
+mTransaction.close();
+```
+
+## Cleaning up the 3DS2 service
+
+When the 3DS2 flow is finished, the 3DS2 service `ThreeDS2Service.INSTANCE` must be cleaned up like so:
+
+```java
+ThreeDS2Service.INSTANCE.cleanup(/*Activity*/ this);
+```
 
 ## Customizing the UI
 

@@ -1,6 +1,6 @@
 <ul>
-<li>Fix UI customization.</li>
-<li>Disable the OTP challenge input text auto suggestions.</li>
-<li>Fix single select challenge none of the options is selected.</li>
-<li>Add troubleshooting readme page.</li>
+<li>PCI compliance ready.</li>
+<li>Fix tests against Android API < 24.</li>
+<li>Fix selection challenge issue.</li>
+<li>Improve JavaDocs.</li>
 </ul>
