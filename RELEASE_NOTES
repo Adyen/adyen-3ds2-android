@@ -1,6 +1,4 @@
 <ul>
-<li>PCI compliance ready.</li>
-<li>Fix tests against Android API < 24.</li>
-<li>Fix selection challenge issue.</li>
-<li>Improve JavaDocs.</li>
+<li>Fix challenge activity save and restore state after screen rotation.</li>
+<li>On challenge activity recreation due to process kill, the challenge activity will be finished and foreground focus will shift to the calling activity.</li>
 </ul>
