@@ -1,4 +1,4 @@
 <ul>
-<li>Fix challenge activity save and restore state after screen rotation.</li>
-<li>On challenge activity recreation due to process kill, the challenge activity will be finished and foreground focus will shift to the calling activity.</li>
+<li>Improved parsing of font names for UI customization.</li>
+<li>Added support for excluding certain device parameters from being collected.</li>
 </ul>
