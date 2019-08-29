@@ -1,4 +1,8 @@
 <ul>
-<li>Improved parsing of font names for UI customization.</li>
-<li>Added support for excluding certain device parameters from being collected.</li>
+<li>Added support for UnionPay.</li>
+<li>Improved the validation of SDK input data.</li>
+<li>Fixed an issue where no permissions declared in the AndroidManifest would cause an exception during initialization.</li>
+<li>Fixed an issue causing the SDK encrypted data to exceed its maximum length.</li>
+<li>Fixed an issue where missing issuer / payment system images would cause an exception during the challenge.</li>
+<li>General fixes for stability and security.</li>
 </ul>
