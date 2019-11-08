@@ -1,8 +1,5 @@
 <ul>
-<li>Added support for UnionPay.</li>
-<li>Improved the validation of SDK input data.</li>
-<li>Fixed an issue where no permissions declared in the AndroidManifest would cause an exception during initialization.</li>
-<li>Fixed an issue causing the SDK encrypted data to exceed its maximum length.</li>
-<li>Fixed an issue where missing issuer / payment system images would cause an exception during the challenge.</li>
-<li>General fixes for stability and security.</li>
+<li>Added consumer Proguard rules and moved obfuscated code into a dedicated package.</li>
+<li>Fixed an issue where Transaction.doChallenge() was potentially throwing an undocumented exception.</li>
+<li>Some bugfixes and improvements.</li>
 </ul>
