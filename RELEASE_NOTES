@@ -1,5 +1,4 @@
 <ul>
-<li>Added consumer Proguard rules and moved obfuscated code into a dedicated package.</li>
-<li>Fixed an issue where Transaction.doChallenge() was potentially throwing an undocumented exception.</li>
+<li>Added ELO certificate</li>
 <li>Some bugfixes and improvements.</li>
 </ul>
