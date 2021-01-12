@@ -1,3 +1,4 @@
 <ul>
-<li>Adds support for version 2.2.0 of the EMV® 3-D Secure protocol.</li>
+<li>Renamed deviceParameterBlacklist to deviceParameterBlocklist on AdyenConfigParameters</li>
+<li>Bug fixes and code improvements.</li>
 </ul>
