@@ -12,15 +12,15 @@ The SDK is available either through [jcenter][dl] or via manual installation.
 
 1. Import the SDK by adding this line to your `build.gradle` file.
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.1"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.2"
 ```
 
 ### Import manually
 
-1. Copy the SDK package `adyen-3ds2-2.2.1.aar` to the `/libs` folder in your module.
+1. Copy the SDK package `adyen-3ds2-2.2.2.aar` to the `/libs` folder in your module.
 2. Import the SDK by adding this line to your module `build.gradle` file.
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.1@aar"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.2@aar"
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ ConfigParameters configParameters = new AdyenConfigParameters.Builder(
 
 ThreeDS2Service.INSTANCE.initialize(/*Activity*/ this, configParameters, null, null);
 
-Transaction mTransaction = ThreeDS2Service.INSTANCE.createTransaction(null, null);
+Transaction mTransaction = ThreeDS2Service.INSTANCE.createTransaction(null, "<MESSAGE_PROTOCOL_VERSION>"); // If protocol is null, defaults to latest "2.2.0"
 
 AuthenticationRequestParameters authenticationRequestParameters = mTransaction.getAuthenticationRequestParameters();
 // Submit the authenticationRequestParameters to /authorise3ds2.

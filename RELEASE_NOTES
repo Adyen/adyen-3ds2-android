@@ -1,4 +1,5 @@
 <ul>
-<li>Renamed deviceParameterBlacklist to deviceParameterBlocklist on AdyenConfigParameters</li>
+<li>Added certificate for Protect Buy (ELO/Diners/Discover)</li>
+<li>Release to Maven Central</li>
 <li>Bug fixes and code improvements.</li>
 </ul>
