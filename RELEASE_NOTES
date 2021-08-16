@@ -1,6 +1,3 @@
 <ul>
-<li>Added certificate Cartes Bancaires</li>
-<li>createTransaction() now requires you to specify the protocol version of that Transaction.</li>
-<li>Make Bouncy Castle a transitive dependency.</li>
-<li>Bug fixes and code improvements.</li>
+<li>Support targetSdkVersion 31</li>
 </ul>
