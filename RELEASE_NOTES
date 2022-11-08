@@ -1,3 +1,3 @@
 <ul>
-<li>Added dynamic root certificates. Added Dual-Stack Lite IP addresses handling.</li>
+<li>Added support for play-services-location v21.0.1. Improved dynamic root certificates handling.</li>
 </ul>
