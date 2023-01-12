@@ -12,15 +12,15 @@ The SDK is available either through [jcenter][dl] or via manual installation.
 
 1. Import the SDK by adding this line to your `build.gradle` file.
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.10"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.11"
 ```
 
 ### Import manually
 
-1. Copy the SDK package `adyen-3ds2-2.2.10.aar` to the `/libs` folder in your module.
+1. Copy the SDK package `adyen-3ds2-2.2.11.aar` to the `/libs` folder in your module.
 2. Import the SDK by adding this line to your module `build.gradle` file.
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.10@aar"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.11@aar"
 ```
 
 ## Usage
