@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -73,13 +73,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -105,10 +105,15 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>android.os.Parcelable</dd>
+</dl>
 <hr>
 <br>
 <pre>public final class <span class="typeNameLabel">UiCustomization</span>
-extends java.lang.Object</pre>
+extends java.lang.Object
+implements android.os.Parcelable</pre>
 <div class="block">This class provides the functionality required to customize the 3DS SDK UI elements.<br>
  An object of this class holds various UI-related parameters.
  <p>
@@ -138,6 +143,39 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="nested.classes.inherited.from.class.android.os.Parcelable">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from interface&nbsp;android.os.Parcelable</h3>
+<code>android.os.Parcelable.ClassLoaderCreator&lt;T&gt;, android.os.Parcelable.Creator&lt;T&gt;</code></li>
+</ul>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static android.os.Parcelable.Creator&lt;<a href="../../../../com/adyen/threeds2/customization/UiCustomization.html" title="class in com.adyen.threeds2.customization">UiCustomization</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#CREATOR">CREATOR</a></span></code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.android.os.Parcelable">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;android.os.Parcelable</h3>
+<code>CONTENTS_FILE_DESCRIPTOR, PARCELABLE_WRITE_RETURN_VALUE</code></li>
+</ul>
 </li>
 </ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -170,42 +208,46 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#describeContents--">describeContents</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/adyen/threeds2/customization/ButtonCustomization.html" title="class in com.adyen.threeds2.customization">ButtonCustomization</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#getButtonCustomization-com.adyen.threeds2.customization.UiCustomization.ButtonType-">getButtonCustomization</a></span>(<a href="../../../../com/adyen/threeds2/customization/UiCustomization.ButtonType.html" title="enum in com.adyen.threeds2.customization">UiCustomization.ButtonType</a>&nbsp;buttonType)</code>
 <div class="block">Returns a <a href="../../../../com/adyen/threeds2/customization/ButtonCustomization.html" title="class in com.adyen.threeds2.customization"><code>ButtonCustomization</code></a> instance for a specified button type <a href="../../../../com/adyen/threeds2/customization/UiCustomization.ButtonType.html" title="enum in com.adyen.threeds2.customization"><code>UiCustomization.ButtonType</code></a>.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/adyen/threeds2/customization/ExpandableInfoCustomization.html" title="class in com.adyen.threeds2.customization">ExpandableInfoCustomization</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#getExpandableInfoCustomization--">getExpandableInfoCustomization</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/adyen/threeds2/customization/LabelCustomization.html" title="class in com.adyen.threeds2.customization">LabelCustomization</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#getLabelCustomization--">getLabelCustomization</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/adyen/threeds2/customization/ScreenCustomization.html" title="class in com.adyen.threeds2.customization">ScreenCustomization</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#getScreenCustomization--">getScreenCustomization</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/adyen/threeds2/customization/SelectionItemCustomization.html" title="class in com.adyen.threeds2.customization">SelectionItemCustomization</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#getSelectionItemCustomization--">getSelectionItemCustomization</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/adyen/threeds2/customization/TextBoxCustomization.html" title="class in com.adyen.threeds2.customization">TextBoxCustomization</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#getTextBoxCustomization--">getTextBoxCustomization</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/adyen/threeds2/customization/ToolbarCustomization.html" title="class in com.adyen.threeds2.customization">ToolbarCustomization</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#getToolbarCustomization--">getToolbarCustomization</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#setBorderColor-java.lang.String-">setBorderColor</a></span>(java.lang.String&nbsp;hexColorCode)</code>
 <div class="block">This utility method sets the border color for all of the specific customizations.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#setButtonCustomization-com.adyen.threeds2.customization.ButtonCustomization-com.adyen.threeds2.customization.UiCustomization.ButtonType-">setButtonCustomization</a></span>(<a href="../../../../com/adyen/threeds2/customization/ButtonCustomization.html" title="class in com.adyen.threeds2.customization">ButtonCustomization</a>&nbsp;buttonCustomization,
                       <a href="../../../../com/adyen/threeds2/customization/UiCustomization.ButtonType.html" title="enum in com.adyen.threeds2.customization">UiCustomization.ButtonType</a>&nbsp;buttonType)</code>
@@ -213,82 +255,87 @@ extends java.lang.Object</pre>
  The 3DS SDK uses this object for customizing buttons.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#setExpandableInfoCustomization-com.adyen.threeds2.customization.ExpandableInfoCustomization-">setExpandableInfoCustomization</a></span>(<a href="../../../../com/adyen/threeds2/customization/ExpandableInfoCustomization.html" title="class in com.adyen.threeds2.customization">ExpandableInfoCustomization</a>&nbsp;expandableInfoCustomization)</code>
 <div class="block">Sets the expandable infos customization.<br>
  The 3DS SDK uses this object for customizing expandable infos.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#setHighlightedBackgroundColor-java.lang.String-">setHighlightedBackgroundColor</a></span>(java.lang.String&nbsp;hexColorCode)</code>
 <div class="block">This utility method sets the highlighted background color for all of the specific customizations.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#setLabelCustomization-com.adyen.threeds2.customization.LabelCustomization-">setLabelCustomization</a></span>(<a href="../../../../com/adyen/threeds2/customization/LabelCustomization.html" title="class in com.adyen.threeds2.customization">LabelCustomization</a>&nbsp;labelCustomization)</code>
 <div class="block">The setLabelCustomization method shall accept a LabelCustomization object.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#setScreenBackgroundColor-java.lang.String-">setScreenBackgroundColor</a></span>(java.lang.String&nbsp;hexColorCode)</code>
 <div class="block">This utility method sets the challenge <code>Activity</code>'s background color by setting the <a href="../../../../com/adyen/threeds2/customization/ScreenCustomization.html" title="class in com.adyen.threeds2.customization"><code>ScreenCustomization</code></a> background color.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#setScreenCustomization-com.adyen.threeds2.customization.ScreenCustomization-">setScreenCustomization</a></span>(<a href="../../../../com/adyen/threeds2/customization/ScreenCustomization.html" title="class in com.adyen.threeds2.customization">ScreenCustomization</a>&nbsp;screenCustomization)</code>
 <div class="block">Sets the screen customization.<br>
  The 3DS SDK uses this object for customizing the challenge <code>Activity</code> screen.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#setSelectionItemCustomization-com.adyen.threeds2.customization.SelectionItemCustomization-">setSelectionItemCustomization</a></span>(<a href="../../../../com/adyen/threeds2/customization/SelectionItemCustomization.html" title="class in com.adyen.threeds2.customization">SelectionItemCustomization</a>&nbsp;selectionItemCustomization)</code>
 <div class="block">Sets the selection items customization.<br>
  The 3DS SDK uses this object for customizing selection items.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#setStatusBarColor-java.lang.String-">setStatusBarColor</a></span>(java.lang.String&nbsp;hexColorCode)</code>
 <div class="block">This utility method sets the status bar color by setting the <a href="../../../../com/adyen/threeds2/customization/ScreenCustomization.html" title="class in com.adyen.threeds2.customization"><code>ScreenCustomization</code></a> status bar color.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#setTextBoxCustomization-com.adyen.threeds2.customization.TextBoxCustomization-">setTextBoxCustomization</a></span>(<a href="../../../../com/adyen/threeds2/customization/TextBoxCustomization.html" title="class in com.adyen.threeds2.customization">TextBoxCustomization</a>&nbsp;textBoxCustomization)</code>
 <div class="block">Sets the text boxes (<code>EditText</code>) customization.<br>
  The 3DS SDK uses this object for customizing text boxes (<code>EditText</code>).</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#setTextColor-java.lang.String-">setTextColor</a></span>(java.lang.String&nbsp;hexColorCode)</code>
 <div class="block">This utility method sets the text color for all of the specific customizations.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#setTintColor-java.lang.String-">setTintColor</a></span>(java.lang.String&nbsp;hexColorCode)</code>
 <div class="block">This utility method sets the tint color for all of the specific customizations.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#setToolbarCustomization-com.adyen.threeds2.customization.ToolbarCustomization-">setToolbarCustomization</a></span>(<a href="../../../../com/adyen/threeds2/customization/ToolbarCustomization.html" title="class in com.adyen.threeds2.customization">ToolbarCustomization</a>&nbsp;toolbarCustomization)</code>
 <div class="block">Sets the toolbar customization.<br>
  The 3DS SDK uses this object for customizing toolbars.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#setToolbarTitle-java.lang.String-">setToolbarTitle</a></span>(java.lang.String&nbsp;title)</code>
 <div class="block">This utility method sets the toolbar title by setting the <a href="../../../../com/adyen/threeds2/customization/ToolbarCustomization.html" title="class in com.adyen.threeds2.customization"><code>ToolbarCustomization</code></a> header text.</div>
 </td>
+</tr>
+<tr id="i22" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/adyen/threeds2/customization/UiCustomization.html#writeToParcel-android.os.Parcel-int-">writeToParcel</a></span>(android.os.Parcel&nbsp;dest,
+             int&nbsp;flags)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -306,6 +353,23 @@ extends java.lang.Object</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="CREATOR">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>CREATOR</h4>
+<pre>public static final&nbsp;android.os.Parcelable.Creator&lt;<a href="../../../../com/adyen/threeds2/customization/UiCustomization.html" title="class in com.adyen.threeds2.customization">UiCustomization</a>&gt; CREATOR</pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.detail">
@@ -329,6 +393,33 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="describeContents--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>describeContents</h4>
+<pre>public&nbsp;int&nbsp;describeContents()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>describeContents</code>&nbsp;in interface&nbsp;<code>android.os.Parcelable</code></dd>
+</dl>
+</li>
+</ul>
+<a name="writeToParcel-android.os.Parcel-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeToParcel</h4>
+<pre>public&nbsp;void&nbsp;writeToParcel(android.os.Parcel&nbsp;dest,
+                          int&nbsp;flags)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>writeToParcel</code>&nbsp;in interface&nbsp;<code>android.os.Parcelable</code></dd>
+</dl>
+</li>
+</ul>
 <a name="getButtonCustomization-com.adyen.threeds2.customization.UiCustomization.ButtonType-">
 <!--   -->
 </a>
@@ -748,13 +839,13 @@ extends java.lang.Object</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

@@ -6,21 +6,21 @@ With this SDK, you can accept 3D Secure 2.0 payments via Adyen.
 
 ## Installation
 
-The SDK is available either through [jcenter][dl] or via manual installation.
+The SDK is available either through [Maven Central][dl] or via manual installation.
 
-### Import from jcenter
+### Import from Maven Central
 
 1. Import the SDK by adding this line to your `build.gradle` file.
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.11"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.12"
 ```
 
 ### Import manually
 
-1. Copy the SDK package `adyen-3ds2-2.2.11.aar` to the `/libs` folder in your module.
+1. Copy the SDK package `adyen-3ds2-2.2.12.aar` to the `/libs` folder in your module.
 2. Import the SDK by adding this line to your module `build.gradle` file.
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.11@aar"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.12@aar"
 ```
 
 ## Usage
@@ -34,12 +34,12 @@ Then, use the on `ThreeDS2Service.INSTANCE` to create a transaction.
 ConfigParameters configParameters = new AdyenConfigParameters.Builder(
         directoryServerId, // Retrieved from Adyen.
         directoryServerPublicKey // Retrieved from Adyen.
-        directoryServerRootCertificates // Retrieved from Adyen. If value is null, default root certificates apply.
+        directoryServerRootCertificates // Retrieved from Adyen.
     ).build();
 
 ThreeDS2Service.INSTANCE.initialize(/*Activity*/ this, configParameters, null, null);
 
-Transaction mTransaction = ThreeDS2Service.INSTANCE.createTransaction(null, "<MESSAGE_PROTOCOL_VERSION>"); // If protocol is null, defaults to latest "2.2.0"
+Transaction mTransaction = ThreeDS2Service.INSTANCE.createTransaction(null, "<MESSAGE_PROTOCOL_VERSION>");
 
 AuthenticationRequestParameters authenticationRequestParameters = mTransaction.getAuthenticationRequestParameters();
 // Submit the authenticationRequestParameters to /authorise3ds2.
@@ -55,6 +55,8 @@ Use the `mTransaction`'s `authenticationRequestParameters` in your call to `/aut
 
 In case a challenge is required, create an instance of `ChallengeParameters` with values from the additional data retrieved from your call to `/authorise3ds2`.
 
+:warning: _Because of recent updates to the 3D Secure protocol, we strongly recommend that you provide the `threeDSRequestorAppURL` parameter as an Android App Link instead of custom link.
+This requires your app to handle the provided Android App Link. More details on how to handle Android App Link can be found on docs [page][applinkdoc]
 ```java
 Map<String, String> additionalData = ...; // Retrieved from Adyen.
 
@@ -63,6 +65,7 @@ challengeParameters.set3DSServerTransactionID(additionalData.get("threeds2.three
 challengeParameters.setAcsTransactionID(additionalData.get("threeds2.threeDS2ResponseData.acsTransID"));
 challengeParameters.setAcsRefNumber(additionalData.get("threeds2.threeDS2ResponseData.acsReferenceNumber"));
 challengeParameters.setAcsSignedContent(additionalData.get("threeds2.threeDS2ResponseData.acsSignedContent"));
+challengeParameters.setThreeDSRequestorAppURL("https://{yourdomain.com}/adyen3ds2");
 ```
 
 Use these challenge parameters to perform the challenge with the `mTransaction` you created earlier:
@@ -168,8 +171,9 @@ ThreeDS2Service.INSTANCE.initialize(getContext(), configParameters, null, uiCust
 This SDK is available under the Apache License, Version 2.0.
 For more information, see the [LICENSE][license] file.
 
-[dl]: http://jcenter.bintray.com/com/adyen/threeds/adyen-3ds2/
+[dl]: https://mvnrepository.com/artifact/com.adyen.threeds/adyen-3ds2
 [docs]: https://docs.adyen.com/developers/risk-management/3d-secure-2/android-sdk-integration
+[applinkdoc]: https://docs.adyen.com/online-payments/classic-integrations/api-integration-ecommerce/3d-secure/native-3ds2/android-sdk-integration#present-a-challenge
 [javadoc]: https://adyen.github.io/adyen-3ds2-android/
 [troubleshooting]: https://github.com/Adyen/adyen-3ds2-android/blob/master/TROUBLESHOOTING.md
 [license]: https://github.com/Adyen/adyen-3ds2-android/blob/master/LICENSE
