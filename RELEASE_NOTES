@@ -1,2 +1,20 @@
-## Fixed
-* Challenge transaction NPE when internet connection is not stable.
+## Changes
+- **Minimum Android Version**: The minSdkVersion has been raised to 21 (Android 5.0).
+- **Platform Updates**: The compileSdkVersion and targetSdkVersion are now set to 34 (Android 14), providing compatibility enhancements and access to the latest features.
+- **Device Information Data**: The data version for device information has been incremented to 1.6, ensuring compatibility with updated data formats and standards.
+- **AdyenConfigParameters.Builder Constructor**: The AdyenConfigParameters.Builder constructor no longer accepts null values, enhancing stability and reliability.
+- **EMV® Specification Bulletin No. 214 v3**: Implementation of whitelistingDataEntry change as per EMV® Specification Bulletin No. 214 v3, ensuring compliance with updated standards.
+- **Proguard Rules Update**: Generic Proguard rules have been replaced with specific rules for the Bouncy Castle Provider library, optimizing code obfuscation.
+- **Internal Security Enhancements**: Various internal security measures have been improved to enhance the overall security posture of the SDK.
+- **Dependency versions**:
+  | Name                                                                                                         | Version                       |
+  |--------------------------------------------------------------------------------------------------------------|-------------------------------|
+  | [Kotlin](https://kotlinlang.org/docs/releases.html#release-details)                                          | **1.9.22**                    |
+  | [Kotlinx Coroutines](https://github.com/Kotlin/kotlinx.coroutines/releases/tag/1.7.3)                        | **1.7.3**                     |
+  | [Kotlinx Serialization JSON](https://github.com/Kotlin/kotlinx.serialization/releases/tag/v1.6.2)            | **1.6.2**                     |
+  | [Annotation](https://developer.android.com/jetpack/androidx/releases/annotation#1.7.1)                       | **1.7.1**                     |
+  | [AppCompat](https://developer.android.com/jetpack/androidx/releases/appcompat#1.6.1)                         | **1.6.1**                     |
+  | [Bouncy Castle Provider](https://www.bouncycastle.org/releasenotes.html#r1rv77)                              | **1.77**                      |
+
+## Fixes
+- **ACS Signed Content Verification edge case**: Resolved an edge case where the verification of acsSignedContent JWS could fail due to an unexpected order in the certificate chain, ensuring consistent and reliable authentication.

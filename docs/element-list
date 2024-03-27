@@ -1,0 +1,20 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.adyen.threeds2.customization/UiCustomization.ButtonType///PointingToDeclaration/com/adyen/threeds2/customization/UiCustomization.ButtonType.html
+$dokka.location:com.adyen.threeds2.util/AdyenConfigParameters.Builder///PointingToDeclaration/com/adyen/threeds2/util/AdyenConfigParameters.Builder.html
+$dokka.location:com.adyen.threeds2.util/AdyenConfigParameters.Parameter///PointingToDeclaration/com/adyen/threeds2/util/AdyenConfigParameters.Parameter.html
+$dokka.location:com.adyen.threeds2/ChallengeResult.Cancelled///PointingToDeclaration/com/adyen/threeds2/ChallengeResult.Cancelled.html
+$dokka.location:com.adyen.threeds2/ChallengeResult.Completed///PointingToDeclaration/com/adyen/threeds2/ChallengeResult.Completed.html
+$dokka.location:com.adyen.threeds2/ChallengeResult.Error///PointingToDeclaration/com/adyen/threeds2/ChallengeResult.Error.html
+$dokka.location:com.adyen.threeds2/ChallengeResult.Timeout///PointingToDeclaration/com/adyen/threeds2/ChallengeResult.Timeout.html
+$dokka.location:com.adyen.threeds2/InitializeResult.Failure///PointingToDeclaration/com/adyen/threeds2/InitializeResult.Failure.html
+$dokka.location:com.adyen.threeds2/InitializeResult.Success///PointingToDeclaration/com/adyen/threeds2/InitializeResult.Success.html
+$dokka.location:com.adyen.threeds2/TransactionResult.Failure///PointingToDeclaration/com/adyen/threeds2/TransactionResult.Failure.html
+$dokka.location:com.adyen.threeds2/TransactionResult.Success///PointingToDeclaration/com/adyen/threeds2/TransactionResult.Success.html
+$dokka.location:com.adyen.threeds2/Warning.Severity///PointingToDeclaration/com/adyen/threeds2/Warning.Severity.html
+com.adyen.threeds2
+com.adyen.threeds2.customization
+com.adyen.threeds2.exception
+com.adyen.threeds2.parameters
+com.adyen.threeds2.util
+

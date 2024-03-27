@@ -13,16 +13,16 @@ The SDK is available either through [Maven Central][dl] or via manual installati
 1. Import the SDK by adding this line to your `build.gradle` file.
 
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.15"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.16"
 ```
 
 ### Import manually
 
-1. Copy the SDK package `adyen-3ds2-2.2.15.aar` to the `/libs` folder in your module.
+1. Copy the SDK package `adyen-3ds2-2.2.16.aar` to the `/libs` folder in your module.
 2. Import the SDK by adding this line to your module `build.gradle` file.
 
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.15@aar"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.16@aar"
 ```
 
 ## Usage
@@ -40,24 +40,43 @@ val configParameters = AdyenConfigParameters.Builder(
     directoryServerRootCertificates, // Retrieved from Adyen Server
 ).build()
 
-ThreeDS2Service.INSTANCE.initialize(
+val initializeResult = ThreeDS2Service.INSTANCE.initialize(
     /* Activity */ this,
     configParameters,
     /* Locale */ null,
     /* UI Customization */ null,
 )
 
-val transaction = ThreeDS2Service.INSTANCE.createTransaction(
+if (initializeResult is InitializeResult.Failure) {
+    // The initialization failed.
+    // Submit the initializeResult.additionalDetails and initializeResult.transactionStatus
+    // to /authorise3ds2
+    return
+}
+
+val transactionResult = ThreeDS2Service.INSTANCE.createTransaction(
     null,
     "<MESSAGE_PROTOCOL_VERSION>"
 )
 
+if (transactionResult is TransactionResult.Failure) {
+    // The creation of transaction failed.
+    // Submit the transactionResult.additionalDetails and transactionResult.transactionStatus
+    // to /authorise3ds2
+    return
+}
+
+val transaction = transactionResult.transaction
 val authenticationRequestParameters = transaction?.authenticationRequestParameters
 // Submit the authenticationRequestParameters to /authorise3ds2.
 
 ```
 
-Use the `transaction`'s `authenticationRequestParameters` in your call to `/authorise3ds2`.
+When the transaction is created successfully use the `transaction`'s 
+`authenticationRequestParameters` in your call to `/authorise3ds2`.
+
+When the initialize or createTransaction is failed, submit the `additionalDetails` and
+the `transactionStatus` in your second call to `/authorise3ds2`.
 
 :warning: _Keep a reference to your `Transaction` instance until the transaction is finished._  
 :warning: _When the transaction is finished successfully or not it must be closed._  
@@ -133,7 +152,7 @@ Every `Transaction` instance is usable only once, so when the transaction is fin
 or not, it should be closed like so:
 
 ```kotlin
-transaction.close();
+transaction.close()
 ```
 
 ## Cleaning up the 3DS2 service
@@ -142,7 +161,7 @@ When the 3DS2 flow is finished, the 3DS2 service `ThreeDS2Service.INSTANCE` must
 so:
 
 ```kotlin
-ThreeDS2Service.INSTANCE.cleanup(/*Activity*/ this);
+ThreeDS2Service.INSTANCE.cleanup(/*Context*/ this)
 ```
 
 ## Customizing the UI
@@ -220,6 +239,6 @@ For more information, see the [LICENSE][license] file.
 
 [javadoc]: https://adyen.github.io/adyen-3ds2-android/
 
-[troubleshooting]: https://github.com/Adyen/adyen-3ds2-android/blob/master/TROUBLESHOOTING.md
+[troubleshooting]: https://github.com/Adyen/adyen-3ds2-android/blob/main/TROUBLESHOOTING.md
 
-[license]: https://github.com/Adyen/adyen-3ds2-android/blob/master/LICENSE
+[license]: https://github.com/Adyen/adyen-3ds2-android/blob/main/LICENSE
