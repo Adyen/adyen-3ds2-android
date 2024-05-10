@@ -1,6 +1,3 @@
-## Changes
-- Improve security measures.
-
 ## Fixes
-- Optimized ProGuard rules.
+- Updated AdditionalDetails on error cases.
 
