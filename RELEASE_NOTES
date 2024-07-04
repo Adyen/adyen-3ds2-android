@@ -1,3 +1,2 @@
 ## Fixes
-- Updated AdditionalDetails on error cases.
-
+- Fixed NoSuchMethodError that occurred on Android APIs 21-25 during the challenge flow
