@@ -1,2 +1,2 @@
 ## Fixes
-- Fixed NoSuchMethodError that occurred on Android APIs 21-25 during the challenge flow
+- Resolved an issue where an UnsatisfiedLinkError could occur during app upgrades on certain devices.
