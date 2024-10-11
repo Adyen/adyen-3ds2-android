@@ -15,6 +15,8 @@ $dokka.location:com.adyen.threeds2/Warning.Severity///PointingToDeclaration/com
 com.adyen.threeds2
 com.adyen.threeds2.customization
 com.adyen.threeds2.exception
+com.adyen.threeds2.listeners.challenges
 com.adyen.threeds2.parameters
 com.adyen.threeds2.util
+com.ul.emvco3ds.sdk.spec
 

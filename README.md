@@ -13,16 +13,16 @@ The SDK is available either through [Maven Central][dl] or via manual installati
 1. Import the SDK by adding this line to your `build.gradle` file.
 
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.20"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.21"
 ```
 
 ### Import manually
 
-1. Copy the SDK package `adyen-3ds2-2.2.20.aar` to the `/libs` folder in your module.
+1. Copy the SDK package `adyen-3ds2-2.2.21.aar` to the `/libs` folder in your module.
 2. Import the SDK by adding this line to your module `build.gradle` file.
 
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.20@aar"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.21@aar"
 ```
 
 ## Usage
@@ -219,6 +219,21 @@ ThreeDS2Service.INSTANCE.initialize(
 ```
 
 ## See also
+
+### Compatibility Table
+Each SDK version is designed with an Android version in mind. In this table you can find what is the latest functional Android version for each 3DS2 SDK version.
+
+| 3DS2 SDK | Android API       |  
+|----------|-------------------|  
+| 2.2.21   | API 35/Android 15 |  
+| 2.2.20   | API 34/Android 14 |
+| 2.2.19   | API 34/Android 14 |
+| 2.2.18   | API 34/Android 14 |
+| 2.2.17   | API 34/Android 14 |
+| 2.2.16   | API 34/Android 14 |
+| 2.2.15   | API 35/Android 15 |
+| 2.2.13   | API 35/Android 15 |
+| 2.2.12   | API 35/Android 15 |
 
 * [Complete Documentation][docs]
 
