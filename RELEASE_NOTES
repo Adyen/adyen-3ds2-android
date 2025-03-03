@@ -1,24 +1,5 @@
-## Added
-* **Support for 16KB Page Size devices**: The SDK now supports devices using 16KB Page Sizes, introduced with Android 15, ensuring seamless compatibility with the latest hardware configurations.
-* **Edge-to-Edge UI**: The SDK leverages the Edge-to-Edge UI, which is the default UI starting with Android 15.
-
-## Changed
-* The **compileSdkVersion** and **targetSdkVersion** are now set to 35 (Android 15).
-* **Dependency versions**:
-| Name                                                                                                         | Version                       |
-|--------------------------------------------------------------------------------------------------------------|-------------------------------|
-| [Android Gradle plugin](https://developer.android.com/build/releases/gradle-plugin)                          | **8.7.0**                     |
-| [Kotlin](https://kotlinlang.org/docs/releases.html#release-details)                                          | **2.0.20**                    |
-| [Kotlinx Coroutines](https://github.com/Kotlin/kotlinx.coroutines/releases/tag/1.9.0)                        | **1.9.0**                     |
-| [Kotlinx Serialization JSON](https://github.com/Kotlin/kotlinx.serialization/releases/tag/v1.7.3)            | **1.7.3**                     |
-| [Activity](https://developer.android.com/jetpack/androidx/releases/activity#1.9.2)                           | **1.9.2**                     |
-| [Annotation](https://developer.android.com/jetpack/androidx/releases/annotation#1.8.2)                       | **1.8.2**                     |
-| [AppCompat](https://developer.android.com/jetpack/androidx/releases/appcompat#1.7.0)                         | **1.7.0**                     |
-| [Bouncy Castle Provider](https://www.bouncycastle.org/download/bouncy-castle-java/#release-notes)            | **1.78.1**                    |
-
-## Fixed
-* **Unit testing with SDK API classes**: The SDK’s public API now resolves the issues that previously caused failures during Unit testing.
+##Changes
+* Acs Signed Content validation error no longer throws `InvalidInputException` and it is instead returned as a `ChallengeResult.Error`.
 
 ## Security
-* **Device lock status check**: Introduced a new security measure that detects if the device is not locked by the user. When detected, the SDK generates an SW99 warning only for the app and not to the ACS.
-* **Enhanced RASP and obfuscation**: Strengthened security through improvements in Runtime Application Self-Protection (RASP) and obfuscation to provide better protection against reverse engineering and other security threats.
+* Enhanced Root Detection

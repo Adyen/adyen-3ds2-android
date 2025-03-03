@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en"><head>
-    <title>Transaction 2.2.21 API </title>
+    <title>Transaction 2.2.22 API </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="dc.created" content="2020-03-25">
     <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
@@ -363,7 +363,7 @@ public interface <span class="typeNameLabel"><a href=Transaction.html>Transactio
                                           >
                                     <li class="blockList">
                                         <h4>doChallenge</h4>
-                                        <pre class="methodSignature">@<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-deprecated/index.html>Deprecated</a>(message = &quot;Use 'doChallenge(Activity!, ChallengeParameters!, &quot; +
+                                        <pre class="methodSignature">@<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-deprecated/index.html>Deprecated</a>(message = &quot;Use 'doChallenge(Activity!, ChallengeParameters!, &quot; +
                  &quot;ChallengeStatusHandler!, int): Unit' method instead.&quot;) abstract void <a href=Transaction.html#doChallenge(android.app.Activity,com.adyen.threeds2.parameters.ChallengeParameters,com.adyen.threeds2.ChallengeStatusReceiver,int)>doChallenge</a>(<a href=https://developer.android.com/reference/kotlin/android/app/Activity.html>Activity</a> currentActivity, <a href=parameters/ChallengeParameters.html>ChallengeParameters</a> challengeParameters, <a href=ChallengeStatusReceiver.html>ChallengeStatusReceiver</a> challengeStatusReceiver, int timeOut)</pre>
                                         <div class="block"><p>Initiates the 3DS Challenge Flow process. </p><p> Note: This method shall be called only when the Challenge Flow is to be applied. </p><p> When this method is called, control of the App is passed to the 3DS SDK. At any point of time, if the time taken by the challenge process exceeds the timeout value passed then the <a href=ChallengeStatusReceiver.html#timedout()>timedout</a> method will be called.</p></div>
 
