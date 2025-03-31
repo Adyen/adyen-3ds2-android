@@ -1,5 +1,3 @@
-##Changes
-* Acs Signed Content validation error no longer throws `InvalidInputException` and it is instead returned as a `ChallengeResult.Error`.
-
 ## Security
-* Enhanced Root Detection
+* Overlay Protection/Detection: Added a new mechanism to prevent or detect screen overlays, triggering an SW98 warning when detected.
+* Enhanced Security Warnings: Strengthened internal capabilities of warnings generation across the SDK lifecycle.
