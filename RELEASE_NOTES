@@ -1,15 +1,9 @@
-## Added
-* Android 16 support: the SDK internals are updated to meet the requirements for Android 16 support.
+## Fixed
+* Updated SDK internals to improve stability and prevent UI freezes on low-end Android devices.
 
 ## Changed
-* The **compileSdkVersion** and **targetSdkVersion** are now set to 36 (Android 16).
 * **Dependency versions**:
 | Name                                                                                                         | Version                       |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------|
-| [Android Gradle plugin](https://developer.android.com/build/releases/gradle-plugin)                          | **8.10.1**                    |
-| [Activity](https://developer.android.com/jetpack/androidx/releases/activity#1.10.1)                          | **1.10.1**                    |
-| [Annotation](https://developer.android.com/jetpack/androidx/releases/annotation#1.9.1)                       | **1.9.1**                     |
-| [Bouncy Castle Provider](https://www.bouncycastle.org/download/bouncy-castle-java/#release-notes)            | **1.80**                      |
-
-## Fixed
-* Challenge Activity recreation when Don't Keep Activities developer option is turned on.
+| [Appcompat](https://developer.android.com/jetpack/androidx/releases/appcompat#1.7.1)                         | **1.7.1**                     |
+| [Bouncy Castle Provider](https://www.bouncycastle.org/download/bouncy-castle-java/#release-notes)            | **1.81**                      |
