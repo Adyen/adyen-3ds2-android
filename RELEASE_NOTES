@@ -1,9 +1,8 @@
+## New
+* Device Information Data: Added device information data version 1.7 for protocol version 2.2.0, ensuring compatibility with the latest data formats and standards.
+
 ## Fixed
-* Updated SDK internals to improve stability and prevent UI freezes on low-end Android devices.
+* Stability Improvements: Enhanced SDK internals to improve overall stability, addressing issues related to view animations and resolving rare race conditions.
 
 ## Changed
-* **Dependency versions**:
-| Name                                                                                                         | Version                       |
-|--------------------------------------------------------------------------------------------------------------|-------------------------------|
-| [Appcompat](https://developer.android.com/jetpack/androidx/releases/appcompat#1.7.1)                         | **1.7.1**                     |
-| [Bouncy Castle Provider](https://www.bouncycastle.org/download/bouncy-castle-java/#release-notes)            | **1.81**                      |
+* Security Enhancements: Strengthened internal RASP and security mechanisms to improve robustness against potential threats.

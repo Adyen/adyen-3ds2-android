@@ -13,16 +13,16 @@ The SDK is available either through [Maven Central][dl] or via manual installati
 1. Import the SDK by adding this line to your `build.gradle` file.
 
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.25"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.26"
 ```
 
 ### Import manually
 
-1. Copy the SDK package `adyen-3ds2-2.2.25.aar` to the `/libs` folder in your module.
+1. Copy the SDK package `adyen-3ds2-2.2.26.aar` to the `/libs` folder in your module.
 2. Import the SDK by adding this line to your module `build.gradle` file.
 
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.25@aar"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.26@aar"
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ implementation "com.adyen.threeds:adyen-3ds2:2.2.25@aar"
 
 First, create an instance of `ConfigParameters` with values from the additional data retrieved from
 your call to `/authorise`.
-Then use the on `ThreeDS2Service.INSTANCE` to create a transaction.
+Then use `ThreeDS2Service.INSTANCE` to create a transaction.
 
 ```kotlin
 val configParameters = AdyenConfigParameters.Builder(
@@ -88,10 +88,9 @@ cleaned up._
 When a challenge is required, create an instance of `ChallengeParameters` with values from the
 additional data retrieved from your call to `/authorise3ds2`.
 
-:warning: _Because of recent updates to the 3D Secure protocol, we strongly recommend that you
-provide the `threeDSRequestorAppURL` parameter as an Android App Link instead of custom link.
-This requires your app to handle the provided Android App Link. More details on how to handle
-Android App Link can be found on docs [page][applinkdoc]_
+:warning: _We strongly recommend that you provide the `threeDSRequestorAppURL` parameter as an 
+Android App Link instead of custom link. This requires your app to handle the provided Android 
+App Link. More details on how to handle Android App Link can be found on docs [page][applinkdoc]_
 
 ```kotlin
 val additionalData = resonse.additionalData // Retrieved from Adyen Server
@@ -225,6 +224,8 @@ Each SDK version is designed with an Android version in mind. In this table you 
 
 | 3DS2 SDK | Android API       |  
 |----------|-------------------|
+| 2.2.26   | API 36/Android 16 |  
+| 2.2.25   | API 36/Android 16 |  
 | 2.2.24   | API 36/Android 16 |  
 | 2.2.23   | API 35/Android 15 |  
 | 2.2.22   | API 35/Android 15 |  
@@ -234,9 +235,6 @@ Each SDK version is designed with an Android version in mind. In this table you 
 | 2.2.18   | API 34/Android 14 |
 | 2.2.17   | API 34/Android 14 |
 | 2.2.16   | API 34/Android 14 |
-| 2.2.15   | API 35/Android 15 |
-| 2.2.13   | API 35/Android 15 |
-| 2.2.12   | API 35/Android 15 |
 
 * [Complete Documentation][docs]
 
