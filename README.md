@@ -254,7 +254,7 @@ For more information, see the [LICENSE][license] file.
 
 [docs]: https://docs.adyen.com/online-payments/classic-integrations/classic-api-integration/3d-secure-authentication/native-3ds2/android-sdk-integration
 
-[applinkdoc]: https://docs.adyen.com/online-payments/classic-integrations/api-integration-ecommerce/3d-secure/native-3ds2/android-sdk-integration#present-a-challenge
+[applinkdoc]: https://docs.adyen.com/online-payments/classic-integrations/classic-api-integration/3d-secure-authentication/native-3ds2/android-sdk-integration#present-a-challenge
 
 [javadoc]: https://adyen.github.io/adyen-3ds2-android/
 
