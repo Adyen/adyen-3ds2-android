@@ -13,16 +13,16 @@ The SDK is available either through [Maven Central][dl] or via manual installati
 1. Import the SDK by adding this line to your `build.gradle` file.
 
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.26"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.27"
 ```
 
 ### Import manually
 
-1. Copy the SDK package `adyen-3ds2-2.2.26.aar` to the `/libs` folder in your module.
+1. Copy the SDK package `adyen-3ds2-2.2.27.aar` to the `/libs` folder in your module.
 2. Import the SDK by adding this line to your module `build.gradle` file.
 
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.26@aar"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.27@aar"
 ```
 
 ## Usage
@@ -240,6 +240,8 @@ Each SDK version is designed with an Android version in mind. In this table you 
 
 * [SDK Reference][javadoc]
 
+* [Data Safety Guide][data-safety-guide]
+
 * [Troubleshooting][troubleshooting]
 
 ## License
@@ -249,11 +251,13 @@ For more information, see the [LICENSE][license] file.
 
 [dl]: https://mvnrepository.com/artifact/com.adyen.threeds/adyen-3ds2
 
-[docs]: https://docs.adyen.com/developers/risk-management/3d-secure-2/android-sdk-integration
+[docs]: https://docs.adyen.com/online-payments/classic-integrations/classic-api-integration/3d-secure-authentication/native-3ds2/android-sdk-integration
 
 [applinkdoc]: https://docs.adyen.com/online-payments/classic-integrations/api-integration-ecommerce/3d-secure/native-3ds2/android-sdk-integration#present-a-challenge
 
 [javadoc]: https://adyen.github.io/adyen-3ds2-android/
+
+[data-safety-guide]: https://github.com/Adyen/adyen-3ds2-android/blob/main/DATA_SAFETY_GUIDE.md
 
 [troubleshooting]: https://github.com/Adyen/adyen-3ds2-android/blob/main/TROUBLESHOOTING.md
 
