@@ -252,7 +252,7 @@ For more information, see the [LICENSE][license] file.
 
 [dl]: https://mvnrepository.com/artifact/com.adyen.threeds/adyen-3ds2
 
-[docs]: https://docs.adyen.com/developers/risk-management/3d-secure-2/android-sdk-integration
+[docs]: https://docs.adyen.com/online-payments/classic-integrations/classic-api-integration/3d-secure-authentication/native-3ds2/android-sdk-integration
 
 [applinkdoc]: https://docs.adyen.com/online-payments/classic-integrations/api-integration-ecommerce/3d-secure/native-3ds2/android-sdk-integration#present-a-challenge
 
