@@ -13,7 +13,7 @@ The SDK is available either through [Maven Central][dl] or via manual installati
 1. Import the SDK by adding this line to your `build.gradle` file.
 
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.26"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.27"
 ```
 
 ### Import manually
@@ -224,6 +224,7 @@ Each SDK version is designed with an Android version in mind. In this table you 
 
 | 3DS2 SDK | Android API       |  
 |----------|-------------------|
+| 2.2.27   | API 36/Android 16 | 
 | 2.2.26   | API 36/Android 16 |  
 | 2.2.25   | API 36/Android 16 |  
 | 2.2.24   | API 36/Android 16 |  
@@ -240,6 +241,8 @@ Each SDK version is designed with an Android version in mind. In this table you 
 
 * [SDK Reference][javadoc]
 
+* [Data Safety Guide][data-safety-guide]
+
 * [Troubleshooting][troubleshooting]
 
 ## License
@@ -254,6 +257,8 @@ For more information, see the [LICENSE][license] file.
 [applinkdoc]: https://docs.adyen.com/online-payments/classic-integrations/api-integration-ecommerce/3d-secure/native-3ds2/android-sdk-integration#present-a-challenge
 
 [javadoc]: https://adyen.github.io/adyen-3ds2-android/
+
+[data-safety-guide]: https://github.com/Adyen/adyen-3ds2-android/blob/main/DATA_SAFETY_GUIDE.md
 
 [troubleshooting]: https://github.com/Adyen/adyen-3ds2-android/blob/main/TROUBLESHOOTING.md
 
