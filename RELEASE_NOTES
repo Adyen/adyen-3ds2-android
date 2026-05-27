@@ -1,8 +1,13 @@
 ## New
-* Device Information Data: Added device information data version 1.7 for protocol version 2.2.0, ensuring compatibility with the latest data formats and standards.
+* Data Safety Guide: Added `DATA_SAFETY_GUIDE.md`, a comprehensive guide to help integrators correctly complete the Google Play Data Safety section by documenting all data collected by the Adyen 3DS2 SDK, its purpose, and sharing practices.
 
 ## Fixed
-* Stability Improvements: Enhanced SDK internals to improve overall stability, addressing issues related to view animations and resolving rare race conditions.
+* Compound Button Text Color: Applied UI customization text color to the merchant whitelisting compound button.
 
 ## Changed
-* Security Enhancements: Strengthened internal RASP and security mechanisms to improve robustness against potential threats.
+* OOB App Launch: Added `Intent.FLAG_ACTIVITY_NEW_TASK` when launching the OOB issuer app intent, improving the navigation UX.
+* Dependency versions:
+
+| Name                                                                                                         | Version                       |
+|--------------------------------------------------------------------------------------------------------------|-------------------------------|
+| [Bouncy Castle Provider](https://www.bouncycastle.org/download/bouncy-castle-java/#release-notes)            | **1.84**                      |
