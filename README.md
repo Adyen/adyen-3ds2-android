@@ -13,16 +13,16 @@ The SDK is available either through [Maven Central][dl] or via manual installati
 1. Import the SDK by adding this line to your `build.gradle` file.
 
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.27"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.28"
 ```
 
 ### Import manually
 
-1. Copy the SDK package `adyen-3ds2-2.2.26.aar` to the `/libs` folder in your module.
+1. Copy the SDK package `adyen-3ds2-2.2.28.aar` to the `/libs` folder in your module.
 2. Import the SDK by adding this line to your module `build.gradle` file.
 
 ```groovy
-implementation "com.adyen.threeds:adyen-3ds2:2.2.26@aar"
+implementation "com.adyen.threeds:adyen-3ds2:2.2.28@aar"
 ```
 
 ## Usage
@@ -145,7 +145,7 @@ When the challenge is cancelled, times out or an error occurs, submit the `addit
 the `transactionStatus` in the `ChallengeResult.Cancelled`, `ChallengeResult.Timeout` or
 `ChallengeResult.Error` in your second call to `/authorise3ds2`.
 
-## Closing the transaction
+### Closing the transaction
 
 Every `Transaction` instance is usable only once, so when the transaction is finished successfully
 or not, it should be closed like so:
@@ -154,7 +154,7 @@ or not, it should be closed like so:
 transaction.close()
 ```
 
-## Cleaning up the 3DS2 service
+### Cleaning up the 3DS2 service
 
 When the 3DS2 flow is finished, the 3DS2 service `ThreeDS2Service.INSTANCE` must be cleaned up like
 so:
@@ -217,6 +217,40 @@ ThreeDS2Service.INSTANCE.initialize(
 )
 ```
 
+## SMS OTP Auto-Submit (Optional)
+
+The SDK can detect and auto-submit the OTP code from an incoming SMS during an OTP challenge flow.
+This is an opt-in feature that uses the [Google SMS User Consent API][google-sms-user-consent-api].
+When active, the SDK requests the user's one-time consent to read the arriving SMS via a system dialog, extracts the OTP code, and fills in the challenge field automatically.
+
+### Prerequisites
+
+The feature requires the `play-services-auth-api-phone` library at runtime. It is **not** bundled in the SDK's POM file. Add it to your app's `build.gradle`:
+
+```groovy
+implementation "com.google.android.gms:play-services-auth-api-phone:18.0.2"
+```
+
+### Enabling the feature
+
+Pass `.smsOtpAutoSubmitEnabled(true)` to `AdyenConfigParameters.Builder`:
+
+```kotlin
+val configParameters = AdyenConfigParameters.Builder(
+    directoryServerId,
+    directoryServerPublicKey,
+    directoryServerRootCertificates,
+).smsOtpAutoSubmitEnabled(true)
+    .build()
+```
+
+> **Note**
+> Omitting `play-services-auth-api-phone` while calling `.smsOtpAutoSubmitEnabled(true)` is safe.
+> The SDK performs a runtime class-presence check and silently falls back to manual OTP entry —
+> no crash or user-visible error occurs.
+> If you do not call `.smsOtpAutoSubmitEnabled(true)`, the feature is disabled by default and
+> no SMS data is accessed regardless of whether the GMS dependency is present.
+
 ## See also
 
 ### Compatibility Table
@@ -224,7 +258,8 @@ Each SDK version is designed with an Android version in mind. In this table you 
 
 | 3DS2 SDK | Android API       |  
 |----------|-------------------|
-| 2.2.27   | API 36/Android 16 | 
+| 2.2.28   | API 36/Android 16 |
+| 2.2.27   | API 36/Android 16 |
 | 2.2.26   | API 36/Android 16 |  
 | 2.2.25   | API 36/Android 16 |  
 | 2.2.24   | API 36/Android 16 |  
@@ -233,9 +268,6 @@ Each SDK version is designed with an Android version in mind. In this table you 
 | 2.2.21   | API 35/Android 15 |  
 | 2.2.20   | API 34/Android 14 |
 | 2.2.19   | API 34/Android 14 |
-| 2.2.18   | API 34/Android 14 |
-| 2.2.17   | API 34/Android 14 |
-| 2.2.16   | API 34/Android 14 |
 
 * [Complete Documentation][docs]
 
@@ -263,3 +295,5 @@ For more information, see the [LICENSE][license] file.
 [troubleshooting]: https://github.com/Adyen/adyen-3ds2-android/blob/main/TROUBLESHOOTING.md
 
 [license]: https://github.com/Adyen/adyen-3ds2-android/blob/main/LICENSE
+
+[google-sms-user-consent-api]: https://developers.google.com/identity/sms-retriever/user-consent/overview

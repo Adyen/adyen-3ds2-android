@@ -1,13 +1,18 @@
 ## New
-* Data Safety Guide: Added `DATA_SAFETY_GUIDE.md`, a comprehensive guide to help integrators correctly complete the Google Play Data Safety section by documenting all data collected by the Adyen 3DS2 SDK, its purpose, and sharing practices.
-
-## Fixed
-* Compound Button Text Color: Applied UI customization text color to the merchant whitelisting compound button.
+* SMS OTP Auto-Submit: Added opt-in support for automatic SMS OTP detection and auto-submit during an OTP challenge flow. The SDK uses the Google SMS User Consent API to request the user's one-time consent to read the incoming SMS, extract the OTP code, and fill in the challenge field automatically. Required setup:
+  1. Add the optional runtime dependency to your app's `build.gradle`:
+     ```groovy
+     implementation "com.google.android.gms:play-services-auth-api-phone:18.0.2"
+     ```
+  2. Enable the feature when building `ConfigParameters`:
+     ```kotlin
+     AdyenConfigParameters.Builder(...).smsOtpAutoSubmitEnabled(true).build()
+     ```
+  On GMS-free devices or when the dependency is absent, the feature is silently skipped.
 
 ## Changed
-* OOB App Launch: Added `Intent.FLAG_ACTIVITY_NEW_TASK` when launching the OOB issuer app intent, improving the navigation UX.
+* Improved device security checks.
 * Dependency versions:
-
 | Name                                                                                                         | Version                       |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------|
-| [Bouncy Castle Provider](https://www.bouncycastle.org/download/bouncy-castle-java/#release-notes)            | **1.84**                      |
+| [Bouncy Castle Provider](https://www.bouncycastle.org/download/bouncy-castle-java/#release-notes)            | **1.86**                      |
